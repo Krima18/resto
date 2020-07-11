@@ -1,0 +1,105 @@
+.row-header
+{
+    margin: 0px auto;
+    padding: 0px auto;
+}
+
+.row-content
+{
+    margin: 0px auto;
+    padding: 50px 0px 50px 0px;
+    border-bottom: 1px ridge;
+    min-height: 400px;
+}
+
+.footer
+{
+    background-color: rgb(212, 198, 198);
+    margin: 0px auto;
+    padding: 20px 0px 20px 0px;
+}
+.footer address a:any-link{
+    color: rgb(134, 143, 170);
+}
+
+.footer ul a:any-link{
+    color: rgb(134, 143, 170);
+}
+
+.jumbotron
+{
+    margin: 0px auto;
+    padding: 70px 20px 70px 20px;
+    background-color: #ffebee; //#eebcd9;
+    color: rgb(88, 87, 86);
+
+}
+
+.jumbotron a:hover
+{
+    text-decoration: none;
+}
+
+address{
+    font-size: smaller;
+    margin: 0px;
+    color: #42474d;
+}
+
+body{
+    padding: 50px 0px 0px 0px;
+    z-index: 0;
+}
+
+.navbar-light
+{
+    background-color: #ffcdd2;
+    color: #3e2723;
+}
+
+.breadcrumb
+{
+    background-color: rgb(212, 198, 198);
+   
+}
+
+.breadcrumb a:any-link
+{
+    color: rgb(253, 244, 244);
+}
+
+.tab-content
+{
+  
+    padding: 10px;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    
+}
+
+.carousel
+{
+    background-color: #77504a;
+}
+
+.carousel-item
+{
+    height: 300px;
+}
+
+.carousel-item img
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 300px;
+}
+
+#carouselButton
+{
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    z-index: 1;
+}

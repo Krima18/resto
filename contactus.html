@@ -17,12 +17,12 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-dark navbar-expand-sm fixed-top">
+    <nav class="navbar navbar-light navbar-expand-sm fixed-top">
         <div class="container">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <a class="navbar-brand" href="#">Ristorante Con Fusion</a>
+            <a class="navbar-brand" href="./index.html"><img src="./img/logo.png" alt="" height="30" width="41"></a>
             <div class="collapse navbar-collapse" id="Navbar">
                 <ul class="navbar-nav mr-auto">
                         <li class="nav-item"><a class="nav-link" href="./index.html"><span class="fa fa-home fa-lg"></span> Home</a></li>
@@ -30,9 +30,59 @@
                         <li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-list fa-lg"></span> Menu</a></li>
                         <li class="nav-item active"><a class="nav-link" href="#"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
                 </ul>
+
+                <span class="navbar-text">
+                    <a id="loginJs">
+                        <span class="fa fa-sign-in"></span> Login
+                    </a>
+                </span>
             </div>
         </div>
     </nav>
+
+    <div class="modal fade" id="loginmodal" role="dialog">
+        <div class="modal-dialog modal-lg" role="content">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Login</h4>
+                    <button class="close" data-dismiss="modal">
+                        &times;
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group col-sm-4">
+                                    <label class="sr-only" for="exampleInputEmail3">Email address</label>
+                                    <input type="email" class="form-control form-control-sm mr-1" id="exampleInputEmail3" placeholder="Enter email">
+                            </div>
+                            <div class="form-group col-sm-4">
+                                <label class="sr-only" for="exampleInputPassword3">Password</label>
+                                <input type="password" class="form-control form-control-sm mr-1" id="exampleInputPassword3" placeholder="Password">
+                            </div>
+                            <div class="col-sm-auto">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox">
+                                    <label class="form-check-label"> Remember me
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
+                            <button type="submit" class="btn btn-primary btn-sm ml-1">Sign in</button>        
+                        </div>
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
 
     <header class="jumbotron">
         <div class="container">
@@ -41,11 +91,117 @@
                     <h1>Ristorante con Fusion</h1>
                     <p>We take inspiration from the World's best cuisines, and create a unique fusion experience. Our lipsmacking creations will tickle your culinary senses!</p>
                 </div>
-                <div class="col-12 col-sm">
+                <div class="col-12 col-sm-6 align-self-center">
+                    
+                    <div class="row">
+                        <div class="col-12 col-sm-6">
+                            <img src="./img/logo.png" alt="" class="img-fluid">
+                        </div>
+                        <div class="col-12 col-sm-6 align-self-center">
+                            <a id="reserveJs"> 
+                                <button class="btn btn-block btn-warning">
+                                    <strong>Reserve Table</strong>
+                                </button>
+                            </a>
+
+                        </div>
+
+                    </div>
                 </div>
             </div>
         </div>
     </header>
+
+    <div class="modal fade" id="reserve" role="dialog">
+        <div class="modal-dialog modal-lg" role="content">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Reserve a Table</h4>
+                    <button class="close" data-dismiss="modal">
+                        &times;
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                    <form action="">
+                        <div class="row form-group">
+                        
+                            <label for="No.ofguest" class="col-12 col-sm-2 col-form-label">Number of Guests</label>
+                            <div class="col-12 col-sm-10" id="No.ofguest">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                    <label class="form-check-label" for="inlineRadio1">1</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                    <label class="form-check-label" for="inlineRadio2">2</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" checked>
+                                    <label class="form-check-label" for="inlineRadio3">3</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option14">
+                                    <label class="form-check-label" for="inlineRadio1">4</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5" value="option5">
+                                    <label class="form-check-label" for="inlineRadio2">5</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio6" value="option6">
+                                    <label class="form-check-label" for="inlineRadio3">6</label>
+                                </div>
+
+
+                            </div>
+
+                        </div>
+                        <div class="row form-group">
+                            <label for="section" class="col-12 col-sm-2 col-form-label">Section</label>
+                            <div id="section" class="col-12 col-sm-10">
+                                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                    <label class="btn btn-success active">
+                                      <input type="radio" name="non-smoking" id="option1" checked>Non-Smoking
+                                    </label>
+                                    <label class="btn btn-danger">
+                                      <input type="radio" name="smoking" id="option2">Smoking
+                                    </label>
+                                  </div>
+                            </div>
+                        </div>
+
+                        <div class="row form-group">
+                            <label for="dateandtime" class="col-12 col-sm-2 col-form-label">Date and Time</label>
+                            <div class="col-12 col-sm-3">
+                                <input type="text" id="dateandtime" class="form-control" name="date" placeholder="Date">
+
+                            </div>
+                            <div class="col-12 col-sm-3">
+                                <input type="text" id="dateandtime" class="form-control" name="time" placeholder="Time">
+
+                            </div>
+
+                        </div>
+
+                        <div class="row form-group">
+                            <div class="col-12 col-sm-1 offset-sm-2">
+                                <button class="btn btn-secondary">Cancel</button>
+
+                            </div>
+                            <div class="col-12 col-sm-1 ml-3">
+                                <button class="btn btn-primary">Reserve</button>
+
+                            </div>
+
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
 
     <div class="container">
         <div class="row">
@@ -92,7 +248,97 @@
               <h3>Send us your Feedback</h3>
            </div>
             <div class="col-12 col-md-9">
-                Form goes here
+                <form action="">
+
+                    <div class="form-group row">
+
+                        <label for="firstname" class="col-md-2 col-form-label">First Name</label>
+
+                        <div class="col-md-10">
+                            <input type="text" id="firstname" class="form-control" name="firstname" placeholder="First Name">
+
+                        </div>
+
+                    </div>
+
+                    <div class="form-group row">
+
+                        <label for="lastname" class="col-md-2 col-form-label">Last Name</label>
+
+                        <div class="col-md-10">
+                            <input type="text" id="Lastname" class="form-control" name="lastname" placeholder="Last Name">
+
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="form-group row">
+
+                        <label for="telnum" class="col-12 col-md-2 col-form-label">Contact Tel.</label>
+
+                        <div class="col-5 col-md-3">
+                            <input type="tel" id="telnum" class="form-control" name="areacode" placeholder="Area Code">
+
+                        </div>
+                        <div class="col-7 col-md-7">
+                            <input type="tel" id="telnum" class="form-control" name="telnum" placeholder="Tel. Number">
+
+                        </div>
+
+                    </div>
+
+                    <div class="form-group row">
+
+                        <label for="emailid" class="col-md-2 col-form-label">Email</label>
+
+                        <div class="col-md-10">
+                            <input type="email" id="emailid" class="form-control" name="emailid" placeholder="Email">
+
+                        </div>
+                        
+                    </div>
+
+                    <div class="form-group row">
+                        <div class="col-md-6 offset-md-2">
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" name="approve" id="approve" value="">
+                                <label class="form-check-label" for="approve">
+                                    <strong>May we contact you?</strong>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-3 offset-md-1">
+                            <select class="form-control">
+                                <option>Tel.no</option>
+                                <option>Email</option>
+                            </select>
+
+
+                        </div>
+
+                    </div>
+
+                    <div class="form-group row">
+
+                        <label for="feedback" class="col-md-2 col-form-label">Your Feedback</label>
+
+                        <div class="col-md-10">
+                            <textarea id="feedback" class="form-control" name="feedback" rows="12"></textarea>
+
+                        </div>
+                        
+                    </div>
+
+                    <div class="form-group row">
+                        <div class="offset-md-2 col-md-10">
+                            <button type="submit" class="btn btn-primary">
+                                Send Feedback
+                            </button>
+
+                        </div>
+
+                    </div>
+                </form>
             </div>
              <div class="col-12 col-md">
             </div>
@@ -141,10 +387,20 @@
            </div>
         </div>
     </footer>
+
+
     <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+
+    <!-- <script>
+        $(document).ready(function(){
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script> -->
+
 </body>
 
 </html>

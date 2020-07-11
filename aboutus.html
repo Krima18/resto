@@ -17,12 +17,12 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-dark navbar-expand-sm fixed-top">
+    <nav class="navbar navbar-light navbar-expand-sm fixed-top">
         <div class="container">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
-           <a class="navbar-brand" href="./index.html">Ristorante Con Fusion</a>
+           <a class="navbar-brand" href="./index.html"><img src="./img/logo.png" alt="" height="30" width="41"></a>
            <div class="collapse navbar-collapse" id="Navbar">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item"><a class="nav-link" href="./index.html"><span class="fa fa-home fa-lg"></span> Home</a></li>
@@ -30,10 +30,61 @@
                     <li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-list fa-lg"></span> Menu</a></li>
                     <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
                 </ul> 
+
+                <span class="navbar-text">
+                    <a id="loginJs">
+                        <span class="fa fa-sign-in"></span> Login
+                    </a>
+                </span>
            </div>
                           
         </div>
+
     </nav>
+
+    <div class="modal fade" id="loginmodal" role="dialog">
+        <div class="modal-dialog modal-lg" role="content">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Login</h4>
+                    <button class="close" data-dismiss="modal">
+                        &times;
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group col-sm-4">
+                                    <label class="sr-only" for="exampleInputEmail3">Email address</label>
+                                    <input type="email" class="form-control form-control-sm mr-1" id="exampleInputEmail3" placeholder="Enter email">
+                            </div>
+                            <div class="form-group col-sm-4">
+                                <label class="sr-only" for="exampleInputPassword3">Password</label>
+                                <input type="password" class="form-control form-control-sm mr-1" id="exampleInputPassword3" placeholder="Password">
+                            </div>
+                            <div class="col-sm-auto">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox">
+                                    <label class="form-check-label"> Remember me
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
+                            <button type="submit" class="btn btn-primary btn-sm ml-1">Sign in</button>        
+                        </div>
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
 
 
     <header class="jumbotron">
@@ -43,11 +94,117 @@
                     <h1>Ristorante con Fusion</h1>
                     <p>We take inspiration from the World's best cuisines, and create a unique fusion experience. Our lipsmacking creations will tickle your culinary senses!</p>
                 </div>
-                <div class="col-12 col-sm">
+                <div class="col-12 col-sm-6 align-self-center">
+                    <div class="row">
+                        <div class="col-12 col-sm-6">
+                            <img src="./img/logo.png" alt="" class="img-fluid">
+                        </div>
+                        <div class="col-12 col-sm-6 align-self-center">
+                            <a id="reserveJs"> 
+                                <button class="btn btn-block btn-warning">
+                                    <strong>Reserve Table</strong>
+                                </button>
+                            </a>
+
+                        </div>
+
+                    </div>
+
                 </div>
             </div>
         </div>
     </header>
+
+    <div class="modal fade" id="reserve" role="dialog">
+        <div class="modal-dialog modal-lg" role="content">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Reserve a Table</h4>
+                    <button class="close" data-dismiss="modal">
+                        &times;
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                    <form action="">
+                        <div class="row form-group">
+                        
+                            <label for="No.ofguest" class="col-12 col-sm-2 col-form-label">Number of Guests</label>
+                            <div class="col-12 col-sm-10" id="No.ofguest">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                    <label class="form-check-label" for="inlineRadio1">1</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                    <label class="form-check-label" for="inlineRadio2">2</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" checked>
+                                    <label class="form-check-label" for="inlineRadio3">3</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option14">
+                                    <label class="form-check-label" for="inlineRadio1">4</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5" value="option5">
+                                    <label class="form-check-label" for="inlineRadio2">5</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio6" value="option6">
+                                    <label class="form-check-label" for="inlineRadio3">6</label>
+                                </div>
+
+
+                            </div>
+
+                        </div>
+                        <div class="row form-group">
+                            <label for="section" class="col-12 col-sm-2 col-form-label">Section</label>
+                            <div id="section" class="col-12 col-sm-10">
+                                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                    <label class="btn btn-success active">
+                                      <input type="radio" name="non-smoking" id="option1" checked>Non-Smoking
+                                    </label>
+                                    <label class="btn btn-danger">
+                                      <input type="radio" name="smoking" id="option2">Smoking
+                                    </label>
+                                  </div>
+                            </div>
+                        </div>
+
+                        <div class="row form-group">
+                            <label for="dateandtime" class="col-12 col-sm-2 col-form-label">Date and Time</label>
+                            <div class="col-12 col-sm-3">
+                                <input type="text" id="dateandtime" class="form-control" name="date" placeholder="Date">
+
+                            </div>
+                            <div class="col-12 col-sm-3">
+                                <input type="text" id="dateandtime" class="form-control" name="time" placeholder="Time">
+
+                            </div>
+
+                        </div>
+
+                        <div class="row form-group">
+                            <div class="col-12 col-sm-1 offset-sm-2">
+                                <button class="btn btn-secondary">Cancel</button>
+
+                            </div>
+                            <div class="col-12 col-sm-1 ml-3">
+                                <button class="btn btn-primary">Reserve</button>
+
+                            </div>
+
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
 
     <div class="container">
         <div class="row">
@@ -70,8 +227,45 @@
                     <p>Started in 2010, Ristorante con Fusion quickly established itself as a culinary icon par excellence in Hong Kong. With its unique brand of world fusion cuisine that can be found nowhere else, it enjoys patronage from the A-list clientele in Hong Kong.  Featuring four of the best three-star Michelin chefs in the world, you never know what will arrive on your plate the next time you visit us.</p>
                     <p>The restaurant traces its humble beginnings to <em>The Frying Pan</em>, a successful chain started by our CEO, Mr. Peter Pan, that featured for the first time the world's best cuisines in a pan.</p>
                 </div>
+
+                <div class="col-sm">
+                    <div class="card">
+                        <h3  class="card-header bg-primary text-white">Facts At a Glance!</h3>
+                        <div class="card-body bg-light">
+                            <dl class="row">
+                                <dt class="col-6">Started</dt>
+                                <dd class="col-6">20 June 2020</dd>
+
+                                <dt class="col-6">Major Stakeholder</dt>
+                                <dd class="col-6">HK Fine Foods Inc.</dd>
+
+                                <dt class="col-6">Last Year's Turnover</dt>
+                                <dd class="col-6">$1,250,357</dd>
+
+                                <dt class="col-6">Employees</dt>
+                                <dd class="col-6">40</dd>
+                            </dl>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12">
+                    <div class="card card-body bg-light">
+                        <blockquote class="blockquote">
+                            <p class="mb-0">You better cut the pizza in four pieces because
+                                I'm not hungry enough to eat six.</p>
+                            <footer class="blockquote-footer">Yogi Berra,
+                                <cite title="Source Title">The Wit and Wisdom of Yogi Berra,
+                                P. Pepe, Diversion Books, 2014</cite>
+                            </footer>
+                        </blockquote>
+                    </div>
+                </div>
+
+            </div>
             
-        </div>
+        
 
 
         <div class="row row-content">
@@ -79,29 +273,171 @@
             <div class="col-12">
                 <h2>Corporate Leadership</h2>
             </div>
-            
-            <div class="col-12">
-                <h3>Peter Pan <small>Chief Epicurious Officer</small></h3>
-                <p class="d-none d-sm-block">Our CEO, Peter, credits his hardworking East Asian immigrant parents who undertook the arduous journey to the shores of America with the intention of giving their children the best future. His mother's wizardy in the kitchen whipping up the tastiest dishes with whatever is available inexpensively at the supermarket, was his first inspiration to create the fusion cuisines for which <em>The Frying Pan</em> became well known. He brings his zeal for fusion cuisines to this restaurant, pioneering cross-cultural culinary connections.</p>
 
-            </div>  
-            
-            <div class="col-12">
-                <h3>Dhanasekaran Witherspoon <small>Chief Food Officer</small></h3>
-                <p class="d-none d-sm-block">Our CFO, Danny, as he is affectionately referred to by his colleagues, comes from a long established family tradition in farming and produce. His experiences growing up on a farm in the Australian outback gave him great appreciation for varieties of food sources. As he puts it in his own words, <em>Everything that runs, wins, and everything that stays, pays!</em></p>
+            <!-- <ul class="nav nav-tabs" role="tab-list">
+                <li class="nav-item">
+                    <a href="#peter" class="nav-link active" role="tab" data-toggle="tab">Peter Pan, CEO</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#dhanasekaran" class="nav-link" role="tab" data-toggle="tab">Dhanasekaran Witherspoon, CFO</a>
+                </li> 
+                <li class="nav-item">
+                    <a href="#agumbe" class="nav-link" role="tab" data-toggle="tab">Agumbe Tang, CTO</a>
+                </li> 
+                <li class="nav-item">
+                    <a href="#alberto" class="nav-link" role="tab" data-toggle="tab">Alberto Somayya, Exec. Chef</a>
+                </li>  
+
+            </ul>
+
+            <div class="tab-content"> 
+                <div role="tabpannel" class="tab-pane fade show active" id="peter">
+                    <h3>Peter Pan <small>Chief Epicurious Officer</small></h3>
+                    <p class="d-none d-sm-block">Our CEO, Peter, credits his hardworking East Asian immigrant parents who undertook the arduous journey to the shores of America with the intention of giving their children the best future. His mother's wizardy in the kitchen whipping up the tastiest dishes with whatever is available inexpensively at the supermarket, was his first inspiration to create the fusion cuisines for which <em>The Frying Pan</em> became well known. He brings his zeal for fusion cuisines to this restaurant, pioneering cross-cultural culinary connections.</p>
+                </div>
+                <div role="tabpannel" class="tab-pane fade" id="dhanasekaran">
+                    <h3>Dhanasekaran Witherspoon <small>Chief Food Officer</small></h3>
+                    <p class="d-none d-sm-block">Our CFO, Danny, as he is affectionately referred to by his colleagues, comes from a long established family tradition in farming and produce. His experiences growing up on a farm in the Australian outback gave him great appreciation for varieties of food sources. As he puts it in his own words, <em>Everything that runs, wins, and everything that stays, pays!</em></p>
+                </div>
+                <div role="tabpannel" class="tab-pane fade" id="agumbe">
+                    <h3>Agumbe Tang <small>Chief Taste Officer</small></h3>
+                    <p class="d-none d-sm-block">Blessed with the most discerning gustatory sense, Agumbe, our CTO, personally ensures that every dish that we serve meets his exacting tastes. Our chefs dread the tongue lashing that ensues if their dish does not meet his exacting standards. He lives by his motto, <em>You click only if you survive my lick.</em></p>
+                </div>
+                <div role="tabpannel" class="tab-pane fade" id="alberto">
+                    <h3>Alberto Somayya <small>Executive Chef</small></h3>
+                    <p class="d-none d-sm-block">Award winning three-star Michelin chef with wide International experience having worked closely with whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion experiences. He says, <em>Put together the cuisines from the two craziest cultures, and you get a winning hit! Amma Mia!</em></p>
+                </div>
+
+
+            </div> -->
+
+
+            <div id="accordion">
+
+                <div class="card">
+                    <div class="card-header" role="tab" id="peterhead">
+                    <h4 class="mb-0">
+                        <a data-toggle="collapse" data-target="#peter">
+                        Peter Pan <small>Chief Epicurious Officer</small>
+                        </a>
+                    </h4>
+                    </div>
+                    <div class="collapse show" id="peter" data-parent="#accordion">
+                        <div class="card-body">
+                            <p class="d-none d-sm-block">Our CEO, Peter, credits his hardworking East Asian immigrant parents who undertook the arduous journey to the shores of America with the intention of giving their children the best future. His mother's wizardy in the kitchen whipping up the tastiest dishes with whatever is available inexpensively at the supermarket, was his first inspiration to create the fusion cuisines for which <em>The Frying Pan</em> became well known. He brings his zeal for fusion cuisines to this restaurant, pioneering cross-cultural culinary connections.</p>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="card">
+                    <div class="card-header" role="tab" id="dannyhead">
+                        <h4 class="mb-0">
+                            <a class="collapsed" data-toggle="collapse" data-target="#danny">
+                            Dhanasekaran Witherspoon <small>Chief Food Officer</small>
+                            </a>
+                        </h4>
+                    </div>
+                    <div class="collapse" id="danny" data-parent="#accordion">
+                        <div class="card-body">
+                            <p class="d-none d-sm-block">Our CFO, Danny, as he is affectionately referred to by his colleagues, comes from a long established family tradition in farming and produce. His experiences growing up on a farm in the Australian outback gave him great appreciation for varieties of food sources. As he puts it in his own words, <em>Everything that runs, wins, and everything that stays, pays!</em></p>
+                
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="card">
+                        <div class="card-header" role="tab" id="agumbehead">
+                        <h4 class="mb-0">
+                            <a class="collapsed" data-toggle="collapse" data-target="#agumbe">
+                            Agumbe Tang <small>Chief Taste Officer</small>
+                            </a>
+                        </h4>
+                    </div>
+                    <div class="collapse" id="agumbe" data-parent="#accordion">
+                        <div class="card-body">
+                            <p class="d-none d-sm-block">Blessed with the most discerning gustatory sense, Agumbe, our CTO, personally ensures that every dish that we serve meets his exacting tastes. Our chefs dread the tongue lashing that ensues if their dish does not meet his exacting standards. He lives by his motto, <em>You click only if you survive my lick.</em></p>
+                            
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="card">
+                        <div class="card-header" role="tab" id="albertohead">
+                        <h4 class="mb-0">
+                            <a class="collapsed" data-toggle="collapse" data-target="#alberto">
+                            Alberto Somayya <small>Executive Chef</small>
+                            </a>
+                        </h4>
+                    </div>
+                    <div class="collapse" id="alberto" data-parent="#accordion">
+                        <div class="card-body">
+                            <p class="d-none d-sm-block">Award winning three-star Michelin chef with wide International experience having worked closely with whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion experiences. He says, <em>Put together the cuisines from the two craziest cultures, and you get a winning hit! Amma Mia!</em></p>
+
+                        </div>
+                    </div>
+                </div>
+
+               
             </div>
+           
+              
             
-            <div class="col-12">
-                <h3>Agumbe Tang <small>Chief Taste Officer</small></h3>
-                <p class="d-none d-sm-block">Blessed with the most discerning gustatory sense, Agumbe, our CTO, personally ensures that every dish that we serve meets his exacting tastes. Our chefs dread the tongue lashing that ensues if their dish does not meet his exacting standards. He lives by his motto, <em>You click only if you survive my lick.</em></p>
+        </div>
+
+       
+        <div class="row row-content">
+
+            <div class="col-12 col-sm-9">
+                <h2>Facts & Figures</h2>
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>&nbsp;</th>
+                                <th>2013</th>
+                                <th>2014</th>
+                                <th>2015</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>Employees</th>
+                                <td>15</td>
+                                <td>30</td>
+                                <td>40</td>
+                            </tr>
+                            <tr>
+                                <th>Guests Served</th>
+                                <td>15000</td>
+                                <td>45000</td>
+                                <td>100,000</td>
+                            </tr>
+                            <tr>
+                                <th>Special Events</th>
+                                <td>3</td>
+                                <td>20</td>
+                                <td>45</td>
+                            </tr>
+                            <tr>
+                                <th>Annual Turnover</th>
+                                <td>$251,325</td>
+                                <td>$1,250,375</td>
+                                <td>~$3,000,000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
             </div>
 
-            <div class="col-12">
-                <h3>Alberto Somayya <small>Executive Chef</small></h3>
-                <p class="d-none d-sm-block">Award winning three-star Michelin chef with wide International experience having worked closely with whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion experiences. He says, <em>Put together the cuisines from the two craziest cultures, and you get a winning hit! Amma Mia!</em></p>
+            <div class="col-12 col-sm-3">
+
             </div>
-            
-            
+           
        </div>
 
     </div>
@@ -152,6 +488,14 @@
      <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
      <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
      <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+     <script src="js/scripts.js"></script>
+
+     <!-- <script>
+        $(document).ready(function(){
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script> -->
+
 
     
 </body>
